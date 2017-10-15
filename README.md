@@ -45,3 +45,54 @@ After installing you can use vue-sticker component in your templates:
 | **end** | Number/Boolean | end point of sticky ability. This prop has to be > 0 and < d (size of your component) |
 | **deg** | Number | this prop need to set degree that will be used when we active sticker by Enter key, without mouse cursor (Yes, i thought about accessibility). Also this prop uses for first animation helper (if you turn it on) |
 | **tipAnimation** | Boolean | This prop turn on/off first animation, to indicate users, taht this element can sticky. (Indeed, i think about it case, may be it can be design by other way) |
+
+Describe your styles in component where you use vue-sticker by three elements: wrapper, main-image and backside-image.
+
+### Sass example with className="good"
+Illustrate case when you set main-image, but backside is just color
+```sass
+.good
+
+    &__wrapper
+
+        &:focus
+            box-shadow: 0 0 5px 10px rgba(0, 0, 0, .4)
+
+    &__main-image
+        background-image: url('your-image.png')
+
+    &__backside-image
+        background-color: lighgray
+        opacity: .4
+```
+
+### CSS example with className="example" and prefix="--"
+In this case we skip wrapper just for example. Usually wrapper styles need to add :hover and :focus for your component. But it's not mast have.
+```CSS
+.example--main-image {
+    background-image: url('example.png');
+}
+
+.example--backside-image {
+    background-image: url('back.png');
+}
+```
+
+### getPercent event
+
+Vue-sticker always generate event, that indicate number from 0 to 1 of sticky complition. When user get down of sticker it will be 1.
+
+To handle this event you just need add your method in your parent component and subscribe on event getPercent in vue-sticker component.
+
+``` js
+    <VueSticker :d="400" @getPercent="doSomething" />
+```
+
+And set your method in parent component, for example we use percent:
+
+```js
+...
+doSomething(value) {
+    this.percentOfComplition = value * 100;
+}
+```
