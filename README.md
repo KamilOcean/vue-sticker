@@ -67,7 +67,7 @@ Illustrate case when you set main-image, but backside is just color
 ```
 
 ### CSS example with className="example" and prefix="--"
-In this case we skip wrapper just for example. Usually wrapper styles need to add :hover and :focus for your component. But it's not mast have.
+In this case we skip wrapper just for example. Usually wrapper styles need to add :hover and :focus for your component. But it's not must have.
 ```CSS
 .example--main-image {
     background-image: url('example.png');
