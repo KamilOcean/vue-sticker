@@ -50,7 +50,7 @@ Describe your styles in component where you use vue-sticker by three elements: w
 
 ### Sass example with className="good"
 Illustrate case when you set main-image, but backside is just color
-```js
+```html
 <VueSticker :d="200" className="good" />
 ```
 
@@ -72,7 +72,7 @@ Illustrate case when you set main-image, but backside is just color
 
 ### CSS example with className="example" and prefix="--"
 
-```js
+```html
 <VueSticker :d="200" className="example" prefix="--" />
 ```
 
@@ -93,8 +93,8 @@ Vue-sticker always generate event, that indicate number from 0 to 1 of sticky co
 
 To handle this event you just need add your method in your parent component and subscribe on event getPercent in vue-sticker component.
 
-``` js
-    <VueSticker :d="400" @getPercent="doSomething" />
+``` html
+<VueSticker :d="400" @getPercent="doSomething" />
 ```
 
 And set your method in parent component, for example we use percent:
