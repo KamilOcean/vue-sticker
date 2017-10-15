@@ -38,7 +38,7 @@ export default {
     name: 'VueSticker',
     props: {
         /**
-         * Diametr (width) of your circle
+         * Diameter (width) of your circle
          */
         d: {
             type: Number,
