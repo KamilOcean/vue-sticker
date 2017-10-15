@@ -2,8 +2,9 @@
   "name": "vue-sticker",
   "description": "vue component, that helps to make sticky effects",
   "version": "1.0.0",
+  "main": "dist/vue-sticker.js",
+  "license": "MIT",
   "author": "KamilOcean <kamil.ocean@gmail.com>",
-  "private": false,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
@@ -23,6 +24,7 @@
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack-dev-server": "^2.9.1",
+    "webpack-merge": "^4.1.0"
   }
 }
