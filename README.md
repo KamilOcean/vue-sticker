@@ -4,6 +4,8 @@
 
 >> wait a few days please, i prepare a demo
 
+![example](./assets/vue-sticker.gif)
+
 ## Installation
 
 ``` bash
