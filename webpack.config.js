@@ -10,16 +10,22 @@ var config = {
   },
   module: {
     rules: [
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-          }
-        }
-      },
+        {
+            enforce: "pre",
+            test: /\.vue$/,
+            exclude: /node_modules/,
+            loader: "eslint-loader",
+          },
+          {
+            test: /\.vue$/,
+            loader: 'vue-loader',
+            options: {
+              loaders: {
+                'scss': 'vue-style-loader!css-loader!sass-loader',
+                'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+              }
+            }
+          },
       {
         test: /\.js$/,
         loader: 'babel-loader',

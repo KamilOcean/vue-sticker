@@ -1,26 +1,45 @@
 {
   "name": "vue-sticker",
   "description": "vue component, that helps to make sticky effects",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "dist/vue-sticker.js",
   "license": "MIT",
-  "author": "KamilOcean <kamil.ocean@gmail.com>",
+  "author": "Kamil Ocean <kamil.ocean@gmail.com> (https://twitter.com/kamil_ocean)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KamilOcean/vue-sticker.git"
+  },
+  "keywords": [
+    "sticker", "sticky", "vue component", "awesome effect", "css effect"
+  ],
+  "bugs": {
+      "url": "https://github.com/KamilOcean/vue-sticker/issues"
+  },
+  "homepage": "https://github.com/KamilOcean/vue-sticker#readme",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
     "vue": "^2.4.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "eslint": "^3.19.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^3.13.1",
     "file-loader": "^1.1.4",
+    "goodparts": "^1.2.1",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
+    "semver": "^5.4.1",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",

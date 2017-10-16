@@ -124,7 +124,7 @@ export default {
 
             this.$refs.invisibleRotate.addEventListener(eventName, e => this.calcRotate(e));
 
-        })
+        }, { passive: true })
 
         this.$refs.invisibleRotate.addEventListener('mousedown', () => this.disableRotate = true);
 
@@ -168,7 +168,8 @@ export default {
 
             switch (e.type) {
 
-                case 'mouseup' || 'mouseleave':
+                case 'mouseup':
+                case 'mouseleave':
                     this.animation();
                     break;
 
@@ -190,7 +191,7 @@ export default {
 
                     if (this.distance >= end) forward = false;
 
-                    if (!!forward) {
+                    if (forward) {
 
                         this.distance += speed;
 
@@ -322,8 +323,6 @@ export default {
 
         },
         backPicture() {
-
-            let height = !this.showInner ? (this.d + 'px') : (this.d - this.distance * 2 + 'px');
 
             return {
                 height: `${this.d}px`,
