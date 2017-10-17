@@ -2,8 +2,6 @@
 
 > vue component, that helps to make sticky effects
 
->> wait a few days please, i prepare a demo
-
 ![example](./assets/vue-sticker.gif)
 
 [![npm version](https://badge.fury.io/js/vue-sticker.svg)](https://badge.fury.io/js/vue-sticker)
