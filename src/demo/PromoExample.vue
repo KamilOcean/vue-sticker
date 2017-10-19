@@ -26,47 +26,39 @@ import VueSticker from '../VueSticker.vue'
 import Container from './Container.vue'
 
 export default {
-    props: {
-        lang: {
-            type: String
-        }
-    },
-    components: { VueSticker, Container },
-    data() {
-
-        return {
-            promoCode: '',
-            sticker: true,
-            title: {
-                en: 'Give your e-mail to get promo code for sale',
-                ru: 'Оставьте свой e-mail для того, чтобы получить промо код со скидкой'
-            },
-            description: {
-                en: 'There is a good example from real world. You can see promo-code and remove stiker only after you type one more symbol',
-                ru: 'Это хороший пример применения стикера в реальном мире. Вы сможете увидеть промо-код и удалить стикер, только после ввода хотя бы одного символа'
-            }
-        }
-
-    },
-    computed: {
-        enablePromo() {
-
-            return this.promoCode.length > 0;
-
-        },
-        realCode() {
-
-            return this.enablePromo ? Math.floor(Math.random(0, 10) * 100000, 10) : '****'
-
-        }
-    },
-    methods: {
-        end(p) {
-
-            if (p > 0.8) this.sticker = false;
-
-        }
+  props: {
+    lang: {
+      type: String
     }
+  },
+  components: { VueSticker, Container },
+  data () {
+    return {
+      promoCode: '',
+      sticker: true,
+      title: {
+        en: 'Give your e-mail to get promo code for sale',
+        ru: 'Оставьте свой e-mail для того, чтобы получить промо код со скидкой'
+      },
+      description: {
+        en: 'There is a good example from real world. You can see promo-code and remove stiker only after you type one more symbol',
+        ru: 'Это хороший пример применения стикера в реальном мире. Вы сможете увидеть промо-код и удалить стикер, только после ввода хотя бы одного символа'
+      }
+    }
+  },
+  computed: {
+    enablePromo () {
+      return this.promoCode.length > 0
+    },
+    realCode () {
+      return this.enablePromo ? Math.floor(Math.random(0, 10) * 100000, 10) : '****'
+    }
+  },
+  methods: {
+    end (p) {
+      if (p > 0.8) this.sticker = false
+    }
+  }
 }
 </script>
 

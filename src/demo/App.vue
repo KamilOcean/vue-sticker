@@ -31,28 +31,26 @@ import VueExample from './VueExample.vue'
 import PromoExample from './PromoExample.vue'
 
 export default {
-    components: { Header, VueExample, PromoExample, Container },
-    data() {
-
-        return {
-            langs: ['en', 'ru'],
-            lang: 'en',
-            firstExample: {
-                en: 'Yeah. It\'s very easy to use component by default behavior like this. You just need add vue-sticker component to your application, set width and styling it.',
-                ru: 'Да. Очень легко использовать компонент с поведеинем по умолчанию, как в этом примере. Достаточно добавить компонент vue-sticker в ваше приложение, установить его ширину (диаметр) и стилизовать его.'
-            },
-            easyUsage: {
-                en: 'And in your template use component by all access properties.',
-                ru: 'И в своих шалонах вы можете использовать компонент с доступными свойствами.'
-            }
-        }
-
-    },
-    methods: {
-        selectLanguage(value) {
-            this.lang = value
-        }
+  components: { Header, VueExample, PromoExample, Container },
+  data () {
+    return {
+      langs: ['en', 'ru'],
+      lang: 'en',
+      firstExample: {
+        en: 'Yeah. It\'s very easy to use component by default behavior like this. You just need add vue-sticker component to your application, set width and styling it.',
+        ru: 'Да. Очень легко использовать компонент с поведеинем по умолчанию, как в этом примере. Достаточно добавить компонент vue-sticker в ваше приложение, установить его ширину (диаметр) и стилизовать его.'
+      },
+      easyUsage: {
+        en: 'And in your template use component by all access properties.',
+        ru: 'И в своих шалонах вы можете использовать компонент с доступными свойствами.'
+      }
     }
+  },
+  methods: {
+    selectLanguage (value) {
+      this.lang = value
+    }
+  }
 }
 </script>
 

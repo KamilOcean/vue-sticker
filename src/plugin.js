@@ -1,7 +1,7 @@
-import VueSticker from './VueSticker.vue';
+import VueSticker from './VueSticker.vue'
 
 module.exports = {
   install: function (Vue, options) {
-    Vue.component('vue-sticker', Clock);
+    Vue.component('vue-sticker', VueSticker)
   }
-};
+}

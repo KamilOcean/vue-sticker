@@ -1,31 +1,26 @@
 var path = require('path')
-var merge = require('webpack-merge');
-var webpack = require('webpack')
+var merge = require('webpack-merge')
+// var webpack = require('webpack')
 
 var config = {
-  // output: {
-  //   path: path.resolve(__dirname, './dist'),
-  //   publicPath: '/dist/',
-  //   filename: 'vue-sticker.js'
-  // },
   module: {
     rules: [
-        {
-            enforce: "pre",
-            test: /\.vue$/,
-            exclude: /node_modules/,
-            loader: "eslint-loader",
-          },
-          {
-            test: /\.vue$/,
-            loader: 'vue-loader',
-            options: {
-              loaders: {
-                'scss': 'vue-style-loader!css-loader!sass-loader',
-                'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-              }
-            }
-          },
+      {
+        enforce: 'pre',
+        test: /\.vue$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            'scss': 'vue-style-loader!css-loader!sass-loader',
+            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+          }
+        }
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -37,11 +32,11 @@ var config = {
         options: {
           name: '[name].[ext]?[hash]'
         }
-    },
-    {
+      },
+      {
         test: /\.svg$/,
         loader: 'svg-inline-loader'
-    }
+      }
     ]
   },
   resolve: {
@@ -65,7 +60,7 @@ module.exports = [
     output: {
       filename: 'vue-sticker.min.js',
       libraryTarget: 'window',
-      library: 'VueSticker',
+      library: 'VueSticker'
     }
   }),
   merge(config, {
@@ -76,34 +71,13 @@ module.exports = [
       library: 'vue-sticker',
       umdNamedDefine: true
     }
-    }),
-    merge(config, {
-      entry: path.resolve(__dirname + '/src/demo/main.js'),
-      output: {
-        path: path.resolve(__dirname, './demo'),
-        publicPath: '/demo/',
-        filename: 'main.js'
-      }
-    })
-];
-
-// if (process.env.NODE_ENV === 'production') {
-//   module.exports.devtool = '#source-map'
-//   // http://vue-loader.vuejs.org/en/workflow/production.html
-//   module.exports.plugins = (module.exports.plugins || []).concat([
-//     new webpack.DefinePlugin({
-//       'process.env': {
-//         NODE_ENV: '"production"'
-//       }
-//     }),
-//     new webpack.optimize.UglifyJsPlugin({
-//       sourceMap: false,
-//       compress: {
-//         warnings: false
-//       }
-//     }),
-//     new webpack.LoaderOptionsPlugin({
-//       minimize: true
-//     })
-//   ])
-// }
+  }),
+  merge(config, {
+    entry: path.resolve(__dirname + '/src/demo/main.js'),
+    output: {
+      path: path.resolve(__dirname, './demo'),
+      publicPath: '/demo/',
+      filename: 'main.js'
+    }
+  })
+]

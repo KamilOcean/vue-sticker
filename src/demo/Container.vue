@@ -6,11 +6,11 @@
 
 <script>
 export default {
-    props: {
-        mod: {
-            type: String
-        }
+  props: {
+    mod: {
+      type: String
     }
+  }
 }
 </script>
 

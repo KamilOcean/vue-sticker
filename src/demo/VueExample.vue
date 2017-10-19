@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import VueSticker from '../VueSticker.vue';
-import Container from './Container.vue';
+import VueSticker from '../VueSticker.vue'
+import Container from './Container.vue'
 
 export default {
-    components: { VueSticker, Container }
+  components: { VueSticker, Container }
 }
 </script>
 

@@ -12,33 +12,27 @@
 
 <script>
 export default {
-    props: {
-        langs: {
-            type: Array,
-            required: true
-        },
-        lang: {
-            type: String
-        }
+  props: {
+    langs: {
+      type: Array,
+      required: true
     },
-    data() {
-
-        return { opened: false }
-
-    },
-    methods: {
-        toggle() {
-
-            this.opened = !this.opened
-
-        },
-        select(lang) {
-
-            this.$emit('selectLang', lang)
-            this.opened = false;
-
-        }
+    lang: {
+      type: String
     }
+  },
+  data () {
+    return { opened: false }
+  },
+  methods: {
+    toggle () {
+      this.opened = !this.opened
+    },
+    select (lang) {
+      this.$emit('selectLang', lang)
+      this.opened = false
+    }
+  }
 }
 </script>
 

@@ -19,48 +19,45 @@ import Container from './Container.vue'
 import TranslationSelect from './TranslationSelect.vue'
 
 export default {
-    props: {
-        lang: {
-            type: String,
-            default: 'en'
-        },
-        langs: {
-            type: Array,
-            required: true
-        }
+  props: {
+    lang: {
+      type: String,
+      default: 'en'
     },
-    components: { Container, TranslationSelect},
-    data() {
-
-        return {
-            menus: [
-                {
-                    en: 'Examples',
-                    ru: 'Примеры',
-                    link: 'examples'
-                },
-                {
-                    en: 'Guide',
-                    ru: 'Инструкция',
-                    link: 'guide'
-                },
-                {
-                    en: 'About',
-                    ru: 'Об авторе',
-                    link: 'about'
-                }
-            ]
-        }
-    },
-    methods: {
-        changeLang(lang) {
-
-            window.console.log('good');
-
-            this.$emit('selectLang', lang)
-
-        }
+    langs: {
+      type: Array,
+      required: true
     }
+  },
+  components: { Container, TranslationSelect },
+  data () {
+    return {
+      menus: [
+        {
+          en: 'Examples',
+          ru: 'Примеры',
+          link: 'examples'
+        },
+        {
+          en: 'Guide',
+          ru: 'Инструкция',
+          link: 'guide'
+        },
+        {
+          en: 'About',
+          ru: 'Об авторе',
+          link: 'about'
+        }
+      ]
+    }
+  },
+  methods: {
+    changeLang (lang) {
+      window.console.log('good')
+
+      this.$emit('selectLang', lang)
+    }
+  }
 }
 </script>
 
