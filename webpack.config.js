@@ -3,11 +3,11 @@ var merge = require('webpack-merge');
 var webpack = require('webpack')
 
 var config = {
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'vue-sticker.js'
-  },
+  // output: {
+  //   path: path.resolve(__dirname, './dist'),
+  //   publicPath: '/dist/',
+  //   filename: 'vue-sticker.js'
+  // },
   module: {
     rules: [
         {
@@ -37,7 +37,11 @@ var config = {
         options: {
           name: '[name].[ext]?[hash]'
         }
-      }
+    },
+    {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+    }
     ]
   },
   resolve: {
@@ -72,7 +76,15 @@ module.exports = [
       library: 'vue-sticker',
       umdNamedDefine: true
     }
-  })
+    }),
+    merge(config, {
+      entry: path.resolve(__dirname + '/src/demo/main.js'),
+      output: {
+        path: path.resolve(__dirname, './demo'),
+        publicPath: '/demo/',
+        filename: 'main.js'
+      }
+    })
 ];
 
 // if (process.env.NODE_ENV === 'production') {

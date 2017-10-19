@@ -30,9 +30,7 @@
  *  in computed properties and it's work fine because
  *  we have not cases when we drag few stickers in the same time
  */
-let startingAnimation,
-    end,
-    shape;
+let startingAnimation, shape;
 
 export default {
     name: 'VueSticker',
@@ -174,7 +172,6 @@ export default {
                     break;
 
                 case 'mousemove':
-                    this.distance = e.offsetY;
                     this.showInner = true;
                     break;
 
@@ -187,7 +184,7 @@ export default {
 
                 if ((this.distance > 0 && this.distance < this.d) || !!forward) {
 
-                    end = endPoint || this.endPoint || this.d;
+                    let end = endPoint || this.endPoint || this.d;
 
                     if (this.distance >= end) forward = false;
 
@@ -256,7 +253,6 @@ export default {
         wrapper() {
 
             return {
-                position: 'relative',
                 width: this.d + 'px',
                 height: this.d + 'px',
                 borderRadius: '50%'
