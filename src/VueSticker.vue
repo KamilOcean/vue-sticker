@@ -1,7 +1,8 @@
 <template>
-    <div tabindex="0" @keyup.enter="autoAction"
+    <div tabindex="0"
+        @keyup.enter="autoAction"
         class="vue-sticker__wrapper"
-        :class="`${this.className + prefix}wrapper`"
+        :class="`${className + prefix}wrapper`"
         :style="wrapper">
         <div ref="invisible" v-show="!disableMove" class="vue-sticker__invisible" :style="invisible"></div>
         <div ref="invisibleRotate" v-show="!disableRotate" class="vue-sticker__invisible"></div>
@@ -9,14 +10,14 @@
             <div v-show="showInner" class="vue-sticker__inner" :style="stylesInner">
                 <div :style="backPicture">
                     <div class="sticker__overflow" :style="innerImageOverflow">
-                        <div class="vue-sticker__inner" :class="`${this.className}__backside-image`" :style="clip">
+                        <div class="vue-sticker__inner" :class="`${className}__backside-image`" :style="clip">
                         </div>
                     </div>
                 </div>
             </div>
             <div :style="mainStyle">
                 <div :style="stayWrapper">
-                    <div :class="`${this.className}__main-image`" :style="mainPicture"></div>
+                    <div :class="`${className}__main-image`" :style="mainPicture"></div>
                 </div>
             </div>
         </div>
@@ -29,7 +30,8 @@
  *  in computed properties and it's work fine because
  *  we have not cases when we drag few stickers in the same time
  */
-let startingAnimation, shape
+let startingAnimation
+let shape
 
 export default {
   name: 'VueSticker',

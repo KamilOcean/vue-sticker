@@ -4,7 +4,7 @@
 
 ![example](./assets/vue-sticker.gif)
 
-[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![npm version](https://badge.fury.io/js/vue-sticker.svg)](https://badge.fury.io/js/vue-sticker)
 
 ## Installation

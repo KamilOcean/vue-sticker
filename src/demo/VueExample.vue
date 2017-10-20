@@ -1,7 +1,11 @@
 <template>
   <div class="vue-example">
       <Container>
-          <VueSticker :d="300" :tipAnimation="true" :deg="145" className="good"></VueSticker>
+          <VueSticker
+            :d="300"
+            :tipAnimation="true"
+            :deg="145"
+            className="good"></VueSticker>
       </Container>
   </div>
 </template>

@@ -1,16 +1,9 @@
 var path = require('path')
 var merge = require('webpack-merge')
-// var webpack = require('webpack')
 
 var config = {
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.vue$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader'
-      },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
