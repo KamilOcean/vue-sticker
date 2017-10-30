@@ -4,10 +4,11 @@ webpackConf.devtool = 'inline-source-map'
 
 module.exports = function (config) {
   config.set({
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
     frameworks: ['jasmine'],
     reporters: ['spec'],
     files: ['./test/index.js'],
+    colors: true,
     preprocessors: {
       './test/index.js': ['webpack', 'sourcemap']
     },
