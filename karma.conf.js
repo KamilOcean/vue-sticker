@@ -9,6 +9,8 @@ module.exports = function (config) {
     reporters: ['spec'],
     files: ['./test/index.js'],
     colors: true,
+    autoWatch: false,
+    singleRun: true,
     preprocessors: {
       './test/index.js': ['webpack', 'sourcemap']
     },
