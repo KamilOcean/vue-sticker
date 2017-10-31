@@ -2,9 +2,9 @@
     <header>
         <Container mod="header">
             <h1>Vue-sticker</h1>
-            <div class="menu">
+            <!-- <div class="menu">
                 <div v-for="(menu, index) in menus" :key="index" class="menu__item">{{ menu[lang] }}</div>
-            </div>
+            </div> -->
             <TranslationSelect
                 :langs="langs"
                 :lang="lang"
