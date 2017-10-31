@@ -51,7 +51,7 @@ module.exports = [
   merge(config, {
     entry: path.resolve(__dirname + '/src/plugin.js'),
     output: {
-      filename: 'vue-sticker.min.js',
+      filename: './dist/vue-sticker.min.js',
       libraryTarget: 'window',
       library: 'VueSticker'
     }
@@ -59,7 +59,7 @@ module.exports = [
   merge(config, {
     entry: path.resolve(__dirname + '/src/VueSticker.vue'),
     output: {
-      filename: 'vue-sticker.js',
+      filename: './dist/vue-sticker.js',
       libraryTarget: 'umd',
       library: 'vue-sticker',
       umdNamedDefine: true
