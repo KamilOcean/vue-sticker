@@ -5,6 +5,13 @@ var config = {
   module: {
     rules: [
       {
+          test: /\.(js|vue)$/,
+          enforce: 'pre',
+          use: [
+              'eslint-loader'
+          ]
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
