@@ -214,7 +214,8 @@ export default {
       return {
         width: this.d + 'px',
         height: this.d + 'px',
-        borderRadius: '50%'
+        borderRadius: '50%',
+        position: 'relative'
       }
     },
     invisible () {
