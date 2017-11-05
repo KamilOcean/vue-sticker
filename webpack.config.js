@@ -68,16 +68,8 @@ module.exports = [
     output: {
       filename: './dist/vue-sticker.js',
       libraryTarget: 'umd',
-      library: 'vue-sticker',
+      library: 'VueSticker',
       umdNamedDefine: true
-    }
-  }),
-  merge(config, {
-    entry: path.resolve(__dirname + '/src/demo/main.js'),
-    output: {
-      path: path.resolve(__dirname, './demo'),
-      publicPath: '/demo/',
-      filename: 'main.js'
     }
   })
 ]
