@@ -10,14 +10,14 @@
             <div v-show="showInner" class="vue-sticker__inner" :style="stylesInner">
                 <div :style="backPicture">
                     <div class="sticker__overflow" :style="innerImageOverflow">
-                        <div class="vue-sticker__inner" :class="`${className}__backside-image`" :style="clip">
+                        <div class="vue-sticker__inner" :class="`${className + prefix}__backside-image`" :style="clip">
                         </div>
                     </div>
                 </div>
             </div>
             <div :style="mainStyle">
                 <div :style="stayWrapper">
-                    <div :class="`${className}__main-image`" :style="mainPicture"></div>
+                    <div :class="`${className + prefix}__main-image`" :style="mainPicture"></div>
                 </div>
             </div>
         </div>

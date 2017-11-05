@@ -56,3 +56,33 @@ To use your custom class names you have to set className prop to vue-sticker com
   Vue.use(VueSticker)
 </script>
 </script>
+
+## Choosing methodology
+
+You can set custom prefix, that will add between block and elements. By default component uses BEM methodology, it's mean classes will be .vue-sticker__main-image and .vue-sticker__backside-image. You may set prefix="--" and classes will be .vue-sticker--main-image and .vue-sticker--backside-image.
+
+<vuep template="#prefix"></vuep>
+<script v-pre type="text/x-template" id="prefix">
+<style>
+.good--main-image,
+.good--backside-image {
+  background-color: rgba(0, 0, 0, .05);
+  background-image: url(https://vuejs.org/images/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: center;
+}
+
+.good--backside-image {
+  opacity: .7
+}
+</style>
+
+<template>
+  <vue-sticker :d="200" class-name="good" prefix="--"></vue-sticker>
+</template>
+
+<script>
+  Vue.use(VueSticker)
+</script>
+</script>
