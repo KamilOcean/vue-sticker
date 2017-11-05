@@ -1,11 +1,13 @@
 import VueSticker from './VueSticker.vue'
 
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(VueSticker)
-}
-
-module.exports = {
-  install: function (Vue, options) {
+const VueStickerPlugin = {
+  install (Vue) {
     Vue.component('vue-sticker', VueSticker)
   }
 }
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(VueStickerPlugin)
+}
+
+export default VueStickerPlugin
