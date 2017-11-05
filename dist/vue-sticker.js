@@ -2,11 +2,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define("vue-sticker", [], factory);
+		define("VueSticker", [], factory);
 	else if(typeof exports === 'object')
-		exports["vue-sticker"] = factory();
+		exports["VueSticker"] = factory();
 	else
-		root["vue-sticker"] = factory();
+		root["VueSticker"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
