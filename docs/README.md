@@ -51,10 +51,6 @@ To use your custom class names you have to set className prop to vue-sticker com
 <template>
   <vue-sticker :d="200" class-name="good"></vue-sticker>
 </template>
-
-<script>
-  Vue.use(VueSticker)
-</script>
 </script>
 
 ## Choosing methodology
@@ -81,8 +77,86 @@ You can set custom prefix, that will add between block and elements. By default 
 <template>
   <vue-sticker :d="200" class-name="good" prefix="--"></vue-sticker>
 </template>
-
-<script>
-  Vue.use(VueSticker)
 </script>
+
+## End point
+
+You can define end point, that disallow sticky by end prop.
+
+<vuep template="#end"></vuep>
+<script v-pre type="text/x-template" id="end">
+<style>
+.vue-sticker__main-image,
+.vue-sticker__backside-image {
+  background-color: rgba(0, 0, 0, .05);
+  background-image: url(https://vuejs.org/images/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: center;
+}
+
+.vue-sticker__backside-image {
+  opacity: .7;
+}
+</style>
+
+<template>
+  <vue-sticker :d="200" :end="50"></vue-sticker>
+</template>
+</script>
+
+## Firstly animation
+
+Component can appear by default animation tip. To turn it on just set tip-animation prop to true. By default it's false.
+
+> Animation ends after first user actions. If you start drag sticker, than animation will end. By default animation direction is from top to bottom i.e. 0 degree. But you can set your custom degree (see 'deg' prop)
+
+<vuep template="#animation"></vuep>
+<script v-pre type="text/x-template" id="animation">
+<style>
+.vue-sticker__main-image,
+.vue-sticker__backside-image {
+  background-color: rgba(0, 0, 0, .05);
+  background-image: url(https://vuejs.org/images/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: center;
+}
+
+.vue-sticker__backside-image {
+  opacity: .7;
+}
+</style>
+
+<template>
+  <vue-sticker :d="200" :tip-animation="true"></vue-sticker>
+</template>
+</script>
+
+## Setup degree animation and tab pressing
+
+Deg prop is degree of firstly animation and tab key pressing.
+
+> Yes, vue-sticker support accessibility. And has tabindex property.
+
+<vuep template="#deg"></vuep>
+<script v-pre type="text/x-template" id="deg">
+<style>
+.vue-sticker__main-image,
+.vue-sticker__backside-image {
+  background-color: rgba(0, 0, 0, .05);
+  background-image: url(https://vuejs.org/images/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: center;
+}
+
+.vue-sticker__backside-image {
+  opacity: .7;
+}
+</style>
+
+<template>
+  <vue-sticker :d="200" :tip-animation="true" :deg="90"></vue-sticker>
+</template>
 </script>
