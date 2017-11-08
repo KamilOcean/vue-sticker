@@ -29,6 +29,10 @@
   "dependencies": {
     "vue": "^2.4.4"
   },
+  "bugs": {
+    "url" : "https://github.com/KamilOcean/vue-sticker/issues",
+    "email" : "kamil.ocean@gmail.com"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.1.1",
