@@ -1,5 +1,6 @@
 var path = require('path')
 var merge = require('webpack-merge')
+var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 var config = {
   module: {
@@ -51,7 +52,10 @@ var config = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  plugins: [
+    new UglifyJSPlugin()
+  ]
 }
 
 module.exports = [

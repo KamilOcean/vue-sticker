@@ -17,7 +17,8 @@
     "css effect"
   ],
   "bugs": {
-    "url": "https://github.com/KamilOcean/vue-sticker/issues"
+    "url": "https://github.com/KamilOcean/vue-sticker/issues",
+    "email": "kamil.ocean@gmail.com"
   },
   "homepage": "https://kamilocean.github.io/vue-sticker/",
   "scripts": {
@@ -28,10 +29,6 @@
   },
   "dependencies": {
     "vue": "^2.4.4"
-  },
-  "bugs": {
-    "url" : "https://github.com/KamilOcean/vue-sticker/issues",
-    "email" : "kamil.ocean@gmail.com"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -72,6 +69,7 @@
     "sinon-chai": "^2.14.0",
     "standard": "^10.0.3",
     "svg-inline-loader": "^0.8.0",
+    "uglifyjs-webpack-plugin": "^1.0.1",
     "vue-highlightjs": "^1.3.3",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
