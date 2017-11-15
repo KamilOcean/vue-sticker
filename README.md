@@ -1,6 +1,7 @@
 # vue-sticker
 
-> vue component, that helps to make sticky effects
+> Vue component, that helps to make sticky effects
+> Awesome & Useless
 
 ![example](./assets/vue-sticker.gif)
 
