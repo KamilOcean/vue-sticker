@@ -2,3 +2,9 @@ src/
 test/
 docs/
 assets/
+
+.eslintrc
+.babelrc
+*.yml
+*.html
+*.js
