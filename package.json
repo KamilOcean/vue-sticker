@@ -1,8 +1,9 @@
 {
   "name": "vue-sticker",
   "description": "vue component, that helps to make sticky effects",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "main": "dist/vue-sticker.js",
+  "files": "dist",
   "license": "MIT",
   "author": "Kamil Ocean <kamil.ocean@gmail.com> (https://twitter.com/kamil_ocean)",
   "repository": {
