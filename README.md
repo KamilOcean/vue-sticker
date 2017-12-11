@@ -110,6 +110,6 @@ doSomething(value) {
 }
 ```
 
-### Bakers
+### Backers
 
 [Maxim Chagin](https://github.com/maxchagin) — 17$
