@@ -109,3 +109,7 @@ doSomething(value) {
     this.percentOfComplition = value * 100;
 }
 ```
+
+### Bakers
+
+[Maxim Chagin](https://github.com/maxchagin) — 17$
